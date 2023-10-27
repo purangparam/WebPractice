@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>객관식 문제</title>
+</head>
+<body>
+    <h1>객관식 문제</h1>
+    <form>
+        <p>겟세마네 설립 연도는?</p>
+        <input type="radio" name="answer" value="1975"> 1975<br>
+        <input type="radio" name="answer" value="1977"> 1977<br>
+        <input type="radio" name="answer" value="1979"> 1979<br>
+        <input type="radio" name="answer" value="1981"> 1981<br>
+        <button type="button" onclick="checkAnswer()">답변 제출</button>
+    </form>
+    <p id="result"></p>
+    <img src="Dido.jpg" id="resultImage" style="display: none;">
+    <img src="Dido_map.jpg" id="resultImage2" style="display: none;">
+
+
+
+    <script>
+        function checkAnswer() {
+            var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                var userAnswer = selectedAnswer.value;
+                if (userAnswer === "1977") {
+                    document.getElementById("result").textContent = "정답입니다!";
+                    document.getElementById("resultImage").style.display = "block";
+                    document.getElementById("resultImage2").style.display = "block";
+
+                } else {
+                    document.getElementById("result").textContent = "틀렸습니다.";
+                }
+            } else {
+                document.getElementById("result").textContent = "답변을 선택하세요.";
+            }
+        }
+    </script>
+</body>
+</html>
