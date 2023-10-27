@@ -30,7 +30,7 @@
         <input type="radio" name="answer" value="1975"> 복음적 기독문화 창달<br>
         <input type="radio" name="answer" value="1977"> 선교<br>
         <input type="radio" name="answer" value="1979"> 구제<br>
-        <input type="radio" name="answer" value="1981"> 헌신<br>
+        <input type="radio" name="answer" value="헌신"> 헌신<br>
         <button type="button" onclick="checkAnswer()">답변 제출</button>
     </form>
     <p id="result"></p>
@@ -45,7 +45,7 @@
             var selectedAnswer = document.querySelector('input[name="answer"]:checked');
             if (selectedAnswer) {
                 var userAnswer = selectedAnswer.value;
-                if (userAnswer === "1981") {
+                if (userAnswer === "헌신") {
                     document.getElementById("result").textContent = "정답입니다!";
                     document.getElementById("resultImage").style.display = "block";
                     document.getElementById("resultImage2").style.display = "block";
