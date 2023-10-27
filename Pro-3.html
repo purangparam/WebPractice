@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>홈커밍데이에 오신 여러분들을 환영합니다!</title>
+    <style>
+        /* 문제와 답변 옵션을 중앙 정렬하는 스타일 */
+        .center {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+         .top-gradient {
+            height: 100px;
+            background: linear-gradient(to bottom, #3FE87F, transparent);
+        }
+        .bottom-gradient {
+            height: 300px;
+            background: linear-gradient(to top, #000000, transparent);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="top-gradient"></div>
+    <div class="center">
+    <h1>홈커밍데이에 오신 여러분들을 환영합니다!</h1>
+    <form>
+        <p>현재 겟세마네 지도교역자님 성함은?</p>
+        <input type="radio" name="answer" value="1975"> 양요승 목사님<br>
+        <input type="radio" name="answer" value="1977"> 윤기영 목사님<br>
+        <input type="radio" name="answer" value="1979"> 김덕종 목사님<br>
+        <input type="radio" name="answer" value="1981"> 손진원 목사님<br>
+        <button type="button" onclick="checkAnswer()">답변 제출</button>
+    </form>
+    <p id="result"></p>
+    <img src="room.jpg" id="resultImage" style="display: none;">
+    <img src="room_map.jpg" id="resultImage2" style="display: none;">
+
+
+
+
+    <script>
+        function checkAnswer() {
+            var selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                var userAnswer = selectedAnswer.value;
+                if (userAnswer === "1977") {
+                    document.getElementById("result").textContent = "다음 성경구절을 암송해주시고 룸으로 돌아가주세요! 마 26:36-46";
+                    document.getElementById("resultImage").style.display = "block";
+                    document.getElementById("resultImage2").style.display = "block";
+
+                } else {
+                    document.getElementById("result").textContent = "틀렸습니다.";
+                }
+            } else {
+                document.getElementById("result").textContent = "답변을 선택하세요.";
+            }
+        }
+    </script>
+    <img src="homecoming.jpg" alt="이미지 설명">
+</body>
+</html>
