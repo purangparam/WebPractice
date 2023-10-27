@@ -27,15 +27,12 @@
     <h1>홈커밍데이에 오신 여러분들을 환영합니다!</h1>
     <form>
         <p>현재 겟세마네 지도교역자님 성함은?</p>
-        <input type="radio" name="answer" value="1975"> 양요승 목사님<br>
-        <input type="radio" name="answer" value="1977"> 윤기영 목사님<br>
-        <input type="radio" name="answer" value="1979"> 김덕종 목사님<br>
-        <input type="radio" name="answer" value="1981"> 손진원 목사님<br>
+        <input type="radio" name="answer" value="1975"> 3문제들을 모두 푸셨나요?<br>
         <button type="button" onclick="checkAnswer()">답변 제출</button>
     </form>
     <p id="result"></p>
-    <img src="Dido.jpg" id="resultImage" style="display: none;">
-    <img src="Dido_map.jpg" id="resultImage2" style="display: none;">
+    <img src="room.jpg" id="resultImage" style="display: none;">
+    <img src="room_map.jpg" id="resultImage2" style="display: none;">
 
 
 
@@ -46,7 +43,7 @@
             if (selectedAnswer) {
                 var userAnswer = selectedAnswer.value;
                 if (userAnswer === "1975") {
-                    document.getElementById("result").textContent = "다음 위치로 가셔서 컨셉사진을 찍어주세요! 컨셉은 겟세마네의 기도입니다!";
+                    document.getElementById("result").textContent = "다음 성경구절을 암송해주시고 룸으로 돌아가주세요! 마 26:36-46";
                     document.getElementById("resultImage").style.display = "block";
                     document.getElementById("resultImage2").style.display = "block";
 
