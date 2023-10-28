@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>객관식 문제</title>
+    <title>홈커밍데이에 오신 여러분들을 환영합니다!</title>
+        <style>
+        /* 문제와 답변 옵션을 중앙 정렬하는 스타일 */
+        .center {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+         .top-gradient {
+            height: 100px;
+            background: linear-gradient(to bottom, #3FE87F, transparent);
+        }
+        .bottom-gradient {
+            height: 300px;
+            background: linear-gradient(to top, #000000, transparent);
+        }
+        
+    </style>
 </head>
 <body>
-    <h1>객관식 문제</h1>
+    <div class="top-gradient"></div>
+    <div class="center">
+    <h1>홈커밍데이에 오신 여러분들을 환영합니다!</h1>
     <form>
         <p>겟세마네 설립 연도는?</p>
-        <input type="radio" name="answer" value="1975"> 1975<br>
-        <input type="radio" name="answer" value="1977"> 1977<br>
-        <input type="radio" name="answer" value="1979"> 1979<br>
-        <input type="radio" name="answer" value="1981"> 1981<br>
+        <input type="radio" name="answer" value="1975"> ① 1975<br>
+        <input type="radio" name="answer" value="1977"> ② 1977<br>
+        <input type="radio" name="answer" value="1979"> ③ 1979<br>
+        <input type="radio" name="answer" value="1981"> ④ 1981<br>
         <button type="button" onclick="checkAnswer()">답변 제출</button>
     </form>
     <p id="result"></p>
-    <img src="Dido.jpg" id="resultImage" style="display: none;">
-    <img src="Dido_map.jpg" id="resultImage2" style="display: none;">
+    <img src="./new/shingwan.jpg" id="resultImage" style="display: none;">
+    <img src="./new/shingwan_map.jpg" id="resultImage2" style="display: none;">
 
 
 
@@ -25,7 +45,7 @@
             if (selectedAnswer) {
                 var userAnswer = selectedAnswer.value;
                 if (userAnswer === "1977") {
-                    document.getElementById("result").textContent = "정답입니다!";
+                    document.getElementById("result").textContent = "정답입니다! 다음 장소들로 이동해주세요!";
                     document.getElementById("resultImage").style.display = "block";
                     document.getElementById("resultImage2").style.display = "block";
 

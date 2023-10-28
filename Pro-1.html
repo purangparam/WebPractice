@@ -27,15 +27,17 @@
     <h1>홈커밍데이에 오신 여러분들을 환영합니다!</h1>
     <form>
         <p>겟세마네 5대 실천방안 중 아닌 것은?</p>
-        <input type="radio" name="answer" value="1975"> 복음적 기독문화 창달<br>
-        <input type="radio" name="answer" value="1977"> 선교<br>
-        <input type="radio" name="answer" value="1979"> 구제<br>
-        <input type="radio" name="answer" value="헌신"> 헌신<br>
+        <input type="radio" name="answer" value="1975"> ① 복음적 기독문화 창달<br>
+        <input type="radio" name="answer" value="1977"> ② 선교<br>
+        <input type="radio" name="answer" value="1979"> ③ 구제<br>
+        <input type="radio" name="answer" value="헌신"> ④ 헌신<br>
         <button type="button" onclick="checkAnswer()">답변 제출</button>
     </form>
     <p id="result"></p>
-    <img src="sun.jpg" id="resultImage" style="display: none;">
-    <img src="sun_map.jpg" id="resultImage2" style="display: none;">
+    <img src="./new/sanhak1.jpg" id="resultImage" style="display: none;">
+    <img src="./new/sanhak2.jpg" id="resultImage2" style="display: none;">
+
+    <img src="./new/sanhak_map.jpg" id="resultImage3" style="display: none;">
 
 
 
@@ -49,6 +51,8 @@
                     document.getElementById("result").textContent = "정답입니다!";
                     document.getElementById("resultImage").style.display = "block";
                     document.getElementById("resultImage2").style.display = "block";
+                    document.getElementById("resultImage3").style.display = "block";
+
 
                 } else {
                     document.getElementById("result").textContent = "틀렸습니다.";
